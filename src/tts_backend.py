@@ -50,9 +50,9 @@ def tts():
     except ValueError:
         return jsonify({"error": "Invalid parameters for top_k, top_p, or temperature. They must be numbers."}), 400
     character_emotion = data.get('character_emotion', 'default')
-
+    phones = data.get('phones', None)
    
-    gen = get_wav_from_text_api(text, text_language, top_k=top_k, top_p=top_p, temperature=temperature, character_emotion=character_emotion)
+    gen = get_wav_from_text_api(text, text_language, top_k=top_k, top_p=top_p, temperature=temperature, character_emotion=character_emotion, phones=phones)
     sampling_rate, audio_data = next(gen)
 
     wav = io.BytesIO()

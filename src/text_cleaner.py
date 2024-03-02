@@ -9,10 +9,15 @@ splits = {"，", "。", "？", "！", ",", ".", "?", "!", "~", ":", "：", "—"
 
 def clean_text_inf(text, language):
     phones, word2ph, norm_text = clean_text(text, language)
+    
     phones = cleaned_text_to_sequence(phones)
     return phones, word2ph, norm_text
 
 
+def clean_text_inf_no_sequence(text, language):
+    phones, word2ph, norm_text = clean_text(text, language)
+
+    return phones, word2ph, norm_text
 
 
 

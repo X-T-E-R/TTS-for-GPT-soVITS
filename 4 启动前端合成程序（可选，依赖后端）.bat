@@ -3,6 +3,6 @@ CHCP 65001
 cd ../
 echo 尝试启动程序
 start  http://127.0.0.1:9867
-runtime\python.exe ./TTS-for-GPT-soVITS/src/TTS_Webui.py
+runtime\python.exe ./TTS-for-GPT-soVITS/src/TTS_Webui_beta.py
 
 pause
